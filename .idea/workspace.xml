@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0818b6cd-9d78-4b77-a6fe-adc5c3171fcc" name="Changes" comment="" />
+    <list default="true" id="0818b6cd-9d78-4b77-a6fe-adc5c3171fcc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/erp/src/main/resources/sql/userinfo.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/erp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/erp/ErpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ErpApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/erp/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,16 +21,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "luke82831"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;luke82831&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/luke82831/erp.git",
-    "accountId": "fff683f7-321a-49b7-9de8-9258163f1a39"
+    "url": "https://github.com/luke82831/erp",
+    "accountId": "797b9b72-2bcf-4c95-beda-4d2f2e897ea5"
   }
 }]]></component>
   <component name="MavenImportPreferences">
@@ -32,9 +40,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2vMQX4VMwttPY4LUsDssvcTBRqK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -43,15 +51,49 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ErpApplication.executor": "Run",
+    "Maven.erp [clean,install].executor": "Run",
+    "Maven.erp [clean].executor": "Run",
+    "Maven.erp [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Engineer/workspace/sideproj/erp",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "configurable.group.appearance"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Engineer\workspace\sideproj\erp\erp\src\main\resources\sql" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ErpApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="22" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.luke.app.ErpApplication" />
+      <module name="erp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.luke.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ErpApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
