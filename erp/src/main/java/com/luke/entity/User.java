@@ -1,31 +1,38 @@
 package com.luke.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name="USERINFO")
 @Data
+@Table(name = "ERP_USER")
+@EqualsAndHashCode(of = "UserId")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
-    private int userId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "USERID")
+    private int UserId;
 
-    private String UserName;
+    @Column(name = "USERNAME")
+    private String Username;
 
+    @Column(name = "PASSWORD")
     private String PassWord;
 
+    @Column(name = "EMPLOYEEID")
     private int EmployeeId;
 
+    @Column(name = "ROLEID")
     private int RoleId;
 
-    private LocalDate LastLoginTime;
+    @Column(name = "LASTLOGINTIME")
+    private LocalDateTime LastLoginTime;
 
+    @Column(name = "STATUS")
     private String Status;
+
 }

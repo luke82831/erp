@@ -5,18 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0818b6cd-9d78-4b77-a6fe-adc5c3171fcc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/erp/src/main/resources/sql/userinfo.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/erp/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/erp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/erp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ErpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ErpApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ServletInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/erp/ErpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ErpApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/erp/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/erp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/resources/sql/userinfo.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,12 +40,12 @@
     &quot;assignee&quot;: &quot;luke82831&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/luke82831/erp",
-    "accountId": "797b9b72-2bcf-4c95-beda-4d2f2e897ea5"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/luke82831/erp&quot;,
+    &quot;accountId&quot;: &quot;797b9b72-2bcf-4c95-beda-4d2f2e897ea5&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -52,6 +65,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ErpApplication.executor": "Run",
+    "Application.com.luke.app.ErpApplication.executor": "Run",
     "Maven.erp [clean,install].executor": "Run",
     "Maven.erp [clean].executor": "Run",
     "Maven.erp [install].executor": "Run",
@@ -64,12 +78,15 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+    "settings.editor.selected.configurable": "settings.sync"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Engineer\workspace\sideproj\erp\erp\src\main\resources" />
       <recent name="E:\Engineer\workspace\sideproj\erp\erp\src\main\resources\sql" />
+      <recent name="E:\Engineer\workspace\sideproj\erp\erp\src\main\java\com\luke\app" />
+      <recent name="E:\Engineer\workspace\sideproj\erp\erp\src\main\java\com\luke" />
     </key>
   </component>
   <component name="RunManager">
