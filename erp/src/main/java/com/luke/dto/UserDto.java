@@ -5,15 +5,15 @@ import lombok.Data;
 @Data
 public class UserDto {
 
-    private String Username;
+    private String userName;
 
-    private String PassWord;
+    private String passWord;
 
-    private Integer EmployeeId;
+    private Integer employeeId;
 
-    private Integer RoleId;
+    private Integer roleId;
 
-    private String Status;
+    private String status;
 
 
 }

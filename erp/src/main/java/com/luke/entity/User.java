@@ -2,37 +2,35 @@ package com.luke.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Data
 @Table(name = "ERP_USER")
-@EqualsAndHashCode(of = "UserId")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "USERID")
-    private int UserId;
+    private int userId;
 
     @Column(name = "USERNAME")
-    private String Username;
+    private String username;
 
     @Column(name = "PASSWORD")
-    private String PassWord;
+    private String passWord;
 
     @Column(name = "EMPLOYEEID")
-    private int EmployeeId;
+    private int employeeId;
 
     @Column(name = "ROLEID")
-    private int RoleId;
+    private int roleId;
 
     @Column(name = "LASTLOGINTIME")
-    private LocalDateTime LastLoginTime;
+    private LocalDateTime lastLoginTime;
 
     @Column(name = "STATUS")
-    private String Status;
+    private String status;
 
 }

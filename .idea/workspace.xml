@@ -5,19 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0818b6cd-9d78-4b77-a6fe-adc5c3171fcc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/erp/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/util/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/util/SpringdocConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/erp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/erp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ErpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ErpApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ErpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/ErpApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/app/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/ServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/dto/UserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp/src/main/java/com/luke/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/java/com/luke/service/Impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/erp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/erp/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/erp/src/main/resources/sql/userinfo.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,41 +48,36 @@
     &quot;accountId&quot;: &quot;797b9b72-2bcf-4c95-beda-4d2f2e897ea5&quot;
   }
 }</component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/modelmapper/modelmapper/3.2.2/modelmapper-3.2.2-sources.jar!/org/modelmapper/ModelMapper.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2vMQX4VMwttPY4LUsDssvcTBRqK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ErpApplication.executor": "Run",
-    "Application.com.luke.app.ErpApplication.executor": "Run",
-    "Maven.erp [clean,install].executor": "Run",
-    "Maven.erp [clean].executor": "Run",
-    "Maven.erp [install].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Engineer/workspace/sideproj/erp",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.sync"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ErpApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.luke.app.ErpApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.erp [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.erp [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.erp [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Engineer/workspace/sideproj/erp&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Engineer\workspace\sideproj\erp\erp\src\main\resources" />
@@ -93,11 +90,11 @@
     <configuration name="ErpApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="22" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.luke.app.ErpApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.luke.ErpApplication" />
       <module name="erp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.luke.app.*" />
+          <option name="PATTERN" value="com.luke.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

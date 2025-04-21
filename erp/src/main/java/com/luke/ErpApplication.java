@@ -1,4 +1,4 @@
-package com.luke.app;
+package com.luke;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

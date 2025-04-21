@@ -13,51 +13,48 @@ import java.time.LocalDateTime;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    UserService UserService;
-
-    @Autowired
-    UserRepository UserRepository;
+    UserRepository userRepository;
 
     @Override
     public User findById(int id) {
-        return UserRepository.findById(id).orElse(null);
+        return userRepository.findById(id).orElse(null);
     }
 
     @Override
-    public User createUserInfo(UserDto UserDto) {
+    public User createUserInfo(UserDto userDto) {
 
         LocalDateTime getNow = LocalDateTime.now();
-        User User = new User();
-        User.setUsername(UserDto.getUsername());
-        User.setPassWord(UserDto.getPassWord());
-        User.setEmployeeId(UserDto.getEmployeeId());
-        User.setRoleId(UserDto.getRoleId());
-        User.setLastLoginTime(getNow);
-        User.setStatus(User.getStatus());
-        return UserRepository.save(User);
+        User user = new User();
+        user.setUsername(userDto.getUserName());
+        user.setPassWord(userDto.getPassWord());
+        user.setEmployeeId(userDto.getEmployeeId());
+        user.setRoleId(userDto.getRoleId());
+        user.setLastLoginTime(getNow);
+        user.setStatus(userDto.getStatus());
+        return userRepository.save(user);
     }
 
     @Override
-    public User updateUserInfo(int userId, UserDto UserDto) {
+    public User updateUserInfo(int userId, UserDto userDto) {
 
-        User User = UserRepository.findById(userId).orElse(null);
+        User user = userRepository.findById(userId).orElse(null);
         LocalDateTime getNow = LocalDateTime.now();
-        if (UserDto.getUsername() != null && !UserDto.getUsername().isEmpty()) {
-            User.setUsername(UserDto.getUsername());
+        if (userDto.getUserName() != null && !userDto.getUserName().isEmpty()) {
+            user.setUsername(userDto.getUserName());
         }
-        if (UserDto.getPassWord() != null && !UserDto.getPassWord().isEmpty()) {
-            User.setPassWord(UserDto.getPassWord());
+        if (userDto.getPassWord() != null && !userDto.getPassWord().isEmpty()) {
+            user.setPassWord(userDto.getPassWord());
         }
-        if (UserDto.getEmployeeId() != null) {
-            User.setEmployeeId(UserDto.getEmployeeId());
+        if (userDto.getEmployeeId() != null) {
+            user.setEmployeeId(userDto.getEmployeeId());
         }
-        if (UserDto.getRoleId() != null) {
-            User.setRoleId(UserDto.getRoleId());
+        if (userDto.getRoleId() != null) {
+            user.setRoleId(userDto.getRoleId());
         }
-        if (UserDto.getStatus() != null && !UserDto.getStatus().isEmpty()) {
-            User.setStatus(UserDto.getStatus());
+        if (userDto.getStatus() != null && !userDto.getStatus().isEmpty()) {
+            user.setStatus(userDto.getStatus());
         }
-        User.setLastLoginTime(getNow);
-        return UserRepository.saveAndFlush(User);
+        user.setLastLoginTime(getNow);
+        return userRepository.saveAndFlush(user);
     }
 }

@@ -14,3 +14,7 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update  # 當 spring boot entity 有修改時, 會自動修改 DB scheam
+
+springdoc:
+  swagger-ui:
+    url: /v3/api-docs
