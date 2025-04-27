@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-@Tag(name = "user", description = "使用者")
+@Tag(name = "user", description = "會員資料表")
 public class UserController {
 
     @Autowired
-    private UserService UserService;
+    private UserService userService;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -23,18 +23,18 @@ public class UserController {
     @GetMapping("/user/{id}")
     @Operation(summary = "取得使用者id")
     public UserDto getUserId(@PathVariable int id) {
-        return modelMapper.map(UserService.findById(id), UserDto.class);
+        return modelMapper.map(userService.findById(id), UserDto.class);
     }
 
     @PostMapping(value = "/user")
     @Operation(summary = "新增使用者")
     public UserDto createUserInfo(@RequestBody UserDto UserDto) {
-        return modelMapper.map(UserService.createUserInfo(UserDto), UserDto.class);
+        return modelMapper.map(userService.createUserInfo(UserDto), UserDto.class);
     }
 
     @PutMapping(value = "/user/{id}")
     @Operation(summary = "修改使用者資料")
     public UserDto updateUserInfo(@PathVariable int id, @RequestBody UserDto UserDto) {
-        return modelMapper.map(UserService.updateUserInfo(id, UserDto), UserDto.class);
+        return modelMapper.map(userService.updateUserInfo(id, UserDto), UserDto.class);
     }
 }
