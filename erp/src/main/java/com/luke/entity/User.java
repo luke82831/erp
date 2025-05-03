@@ -12,22 +12,22 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "USERID")
+    @Column(name = "USER_ID")
     private int userId;
 
-    @Column(name = "USERNAME")
+    @Column(name = "USER_NAME")
     private String username;
 
     @Column(name = "PASSWORD")
     private String passWord;
 
-    @Column(name = "EMPLOYEEID")
+    @Column(name = "EMPLOYEE_ID")
     private int employeeId;
 
-    @Column(name = "ROLEID")
+    @Column(name = "ROLE_ID")
     private int roleId;
 
-    @Column(name = "LASTLOGINTIME")
+    @Column(name = "LAST_LOGIN_TIME")
     private LocalDateTime lastLoginTime;
 
     @Column(name = "STATUS")

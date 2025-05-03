@@ -2,6 +2,7 @@ package com.luke.service.Impl;
 
 import com.luke.entity.Product;
 import com.luke.service.ProductService;
+import com.luke.service.SupplierService;
 import jakarta.transaction.Transactional;
 import org.apache.poi.ss.usermodel.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +29,15 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    private SupplierService supplierService;
+
     @Override
     @Transactional
     public void importExcelToDatabase(InputStream is) throws Exception {
         Workbook workbook = WorkbookFactory.create(is);
+        FormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();
+
         Sheet targetSheet = workbook.getSheet("成本表");
         if (targetSheet == null) {
             throw new RuntimeException("找不到名為『成本表』的Sheet！");
@@ -54,7 +60,7 @@ public class ProductServiceImpl implements ProductService {
         // 讀取每一列資料
         while (rowIterator.hasNext()) {
             Row row = rowIterator.next();
-            Product product = parseRow(row, headers);
+            Product product = parseRow(row, headers, evaluator);
             if (product != null) {
                 products.add(product);
             }
@@ -64,7 +70,7 @@ public class ProductServiceImpl implements ProductService {
         batchInsert(products);
     }
 
-    private Product parseRow(Row row, List<String> headers) {
+    private Product parseRow(Row row, List<String> headers, FormulaEvaluator evaluator) {
         Product product = new Product();
 
         for (int i = 0; i < headers.size(); i++) {
@@ -76,34 +82,34 @@ public class ProductServiceImpl implements ProductService {
             System.out.println("處理欄位: " + header + ", 類型: " + cell.getCellType());
 
             switch (header) {
-                case "品牌":
+                case "產品品牌":
                     product.setProductBrand(getCellValue(cell));
                     break;
-                case "品名":
+                case "產品名稱":
                     product.setProductName(getCellValue(cell));
                     break;
                 case "備註":
                     product.setProductDescription(getCellValue(cell));
                     break;
-                case "類型":
+                case "產品類型":
                     product.setProductType(getCellValue(cell));
                     break;
-                case "條碼":
+                case "產品條碼":
                     product.setProductBarcode(getCellValue(cell));
                     break;
                 case "單顆進價":
                     product.setProductCostPrice(getDoubleCellValue(cell));
                     break;
                 case "V2":
-                    product.setProductCostPriceVer2(getDoubleCellValue(cell));
+                    product.setProductCostPriceVer2(getDoubleFormulaCellValue(cell, evaluator));
                     break;
-                case "日幣":
+                case "日幣價格":
                     product.setYen(getDoubleCellValue(cell));
                     break;
                 case "上架日期":
                     product.setReleaseDate(getDateCellValue(cell));
                     break;
-                case "到貨日":
+                case "到貨日期":
                     product.setArriveDate(getLocalDateCellValue(cell));
                     break;
                 case "建議售價":
@@ -118,8 +124,9 @@ public class ProductServiceImpl implements ProductService {
                 case "最低庫存警告":
                     product.setLowStockWarning(getIntCellValue(cell));
                     break;
-                case "供應商":
-                    product.setSupplierId(getIntCellValue(cell));
+                case "供應商名稱":
+                    int supplierId = supplierService.findBySupplierName(getCellValue(cell));
+                    product.setSupplierId(supplierId);
                     break;
             }
             } catch (Exception e) {
@@ -134,9 +141,9 @@ public class ProductServiceImpl implements ProductService {
         if (cell == null) return null;
         switch (cell.getCellType()) {
             case STRING:
-                return cell.getStringCellValue();
+                return cell.getStringCellValue().trim();
             case NUMERIC:
-                return String.valueOf(cell.getNumericCellValue());
+                return String.valueOf(cell.getNumericCellValue()).trim();
             default:
                 return null;
         }
@@ -150,6 +157,22 @@ public class ProductServiceImpl implements ProductService {
             default:
                 return null;
         }
+    }
+
+    private Double getDoubleFormulaCellValue(Cell cell, FormulaEvaluator evaluator) {
+        if (cell == null) return null;
+
+        switch (cell.getCellType()) {
+            case FORMULA:
+                CellValue cellValue = evaluator.evaluate(cell);
+                if (cellValue.getCellType() == CellType.NUMERIC) {
+                    return cellValue.getNumberValue();
+                }
+                break;
+            case NUMERIC:
+                return cell.getNumericCellValue();
+        }
+        return null;
     }
 
     private Integer getIntCellValue(Cell cell) {

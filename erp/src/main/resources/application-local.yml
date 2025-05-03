@@ -1,0 +1,40 @@
+server:
+  port: 8181
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: 'sa'
+    password:
+    url: 'jdbc:h2:mem:erp'  # H2 的 JDBC URL, mem 表示使用記憶體, my_app 是資料庫的名稱
+  h2:
+    console:
+      enabled: true  # 設定要啟用 H2 的 console 可以在瀏覽器上面查詢 table
+      path: '/h2-console' # 瀏覽器 console 的 URL 路徑
+  jpa:
+    generate-ddl: false
+    open-in-view: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update  # 當 spring boot entity 有修改時, 會自動修改 DB scheam
+
+swagger:
+  # For security reason, it's better to explicitly enable on each non-production profile
+  enabled: true
+  forCodeGeneration: true
+  hide-error-endpoint: true
+  api-info:
+    version: latest
+  ui:
+    deep-linking: true
+    display-operation-id: false
+    default-models-expand-depth: 1
+    default-model-expand-depth: 1
+    default-Model-rendering: EXAMPLE
+    display-request-duration: true
+    doc-expansion: NONE
+    filter: false
+    operations-sorter: ALPHA
+    show-extensions: false
+    tags-sorter: ALPHA
+    supported-submit-methods: ["get", "put", "post", "delete", "options", "head", "patch", "trace"]

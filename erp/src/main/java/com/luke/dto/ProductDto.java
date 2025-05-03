@@ -54,21 +54,4 @@ public class ProductDto {
     @Schema(description = "供應商ID")
     private int supplierId;
 
-    public ProductDto(String productBrand, String productName, String productDescription, String productType, String productBarcode, double productCostPrice, double productCostPriceVer2, double yen, LocalDateTime releaseDate, LocalDate arriveDate, double sellingPrice, String productQuantity, String productUnit, int lowStockWarning, int supplierId) {
-        this.productBrand = productBrand;
-        this.productName = productName;
-        this.productDescription = productDescription;
-        this.productType = productType;
-        this.productBarcode = productBarcode;
-        this.productCostPrice = productCostPrice;
-        this.productCostPriceVer2 = productCostPriceVer2;
-        this.yen = yen;
-        this.releaseDate = releaseDate;
-        this.arriveDate = arriveDate;
-        this.sellingPrice = sellingPrice;
-        this.productQuantity = productQuantity;
-        this.productUnit = productUnit;
-        this.lowStockWarning = lowStockWarning;
-        this.supplierId = supplierId;
-    }
 }
