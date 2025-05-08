@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "ERP_SUPPLIERS_INFO")
+@Table(name = "ERP_SUPPLIERS")
 public class Supplier {
 
     @Id
