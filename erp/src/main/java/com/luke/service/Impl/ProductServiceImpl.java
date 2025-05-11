@@ -247,7 +247,7 @@ public class ProductServiceImpl implements ProductService {
 
 
     private void batchInsert(List<Product> products) {
-        String sql = "INSERT INTO ERP_PRODUCT_INFO (PRODUCT_BRAND, PRODUCT_NAME, PRODUCT_DESCRIPTION, " +
+        String sql = "INSERT INTO ERP_PRODUCT (PRODUCT_BRAND, PRODUCT_NAME, PRODUCT_DESCRIPTION, " +
                 "PRODUCT_TYPE, PRODUCT_BARCODE, PRODUCT_COST_PRICE, PRODUCT_COST_PRICE_VER2, YEN, " +
                 "RELEASE_DATE, ARRIVE_DATE, SELLING_PRICE, PRODUCT_QUANTITY, PRODUCT_UNIT, " +
                 "LOW_STOCK_WARNING, SUPPLIER_ID) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";

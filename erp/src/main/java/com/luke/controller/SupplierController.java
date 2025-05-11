@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-@Tag(name = "suppliers", description = "供應商資料表")
+@Tag(name = "supplier", description = "供應商資料表")
 public class SupplierController {
 
 

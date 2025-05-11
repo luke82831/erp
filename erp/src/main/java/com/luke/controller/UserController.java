@@ -22,7 +22,7 @@ public class UserController {
 
     @GetMapping("/user/{id}")
     @Operation(summary = "取得使用者id")
-    public UserDto getUserId(@PathVariable int id) {
+    public UserDto getUserId(@PathVariable(name = "id") int id) {
         return modelMapper.map(userService.findById(id), UserDto.class);
     }
 
@@ -34,7 +34,7 @@ public class UserController {
 
     @PutMapping(value = "/user/{id}")
     @Operation(summary = "修改使用者資料")
-    public UserDto updateUserInfo(@PathVariable int id, @RequestBody UserDto UserDto) {
+    public UserDto updateUserInfo(@PathVariable(name = "id") int id, @RequestBody UserDto UserDto) {
         return modelMapper.map(userService.updateUserInfo(id, UserDto), UserDto.class);
     }
 }

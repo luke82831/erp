@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class UserDto {
+
     @Schema(description = "使用者帳號")
     private String userName;
 
@@ -19,6 +20,5 @@ public class UserDto {
 
     @Schema(description = "帳號狀態")
     private String status;
-
 
 }

@@ -4,9 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 @Data
-public class SuppliersDto {
-
-    private int supplierId;
+public class SupplierDto {
 
     @Schema(description = "供應商名稱")
     private String SupplierName;
