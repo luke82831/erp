@@ -7,27 +7,27 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-@Table(name = "ERP_TRANSACTION")
-public class Transaction {
+@Table(name = "ERP_INVENTORY_TRANSACTION")
+public class InventoryTransaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "TRANSACTION_ID")
+    @Column(name = "INVENTORY_TRANSACTION_ID")
     private long transactionId;
 
-    @Column(name = "PRODUCT_ID")
+    @Column(name = "INVENTORY_PRODUCT_ID")
     private long productId;
 
-    @Column(name = "TRANSACTION_DATE")
+    @Column(name = "INVENTORY_TRANSACTION_DATE")
     private LocalDate transactionDate;
 
-    @Column(name = "TRANSACTION_TYPE")
+    @Column(name = "INVENTORY_TRANSACTION_TYPE")
     private String transactionType;
 
-    @Column(name = "TRANSACTION_QUANTITY")
+    @Column(name = "INVENTORY_TRANSACTION_QUANTITY")
     private long transactionQuantity;
 
-    @Column(name = "TRANSACTION_UNIT")
+    @Column(name = "INVENTORY_TRANSACTION_UNIT")
     private String transactionUnit;
 
     @Column(name = "ORDER_ID")

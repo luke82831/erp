@@ -59,7 +59,7 @@ INSERT INTO ERP_USER (
        LAST_LOGIN_TIME,
        STATUS
        ) VALUES
-       ('吳泓儒', '123456', 1, 1, TIMESTAMP '2025-04-14 15:16:17', 'AVAILABLE');
+       ('WU', '123456', 1, 1, TIMESTAMP '2025-04-14 15:16:17', 'AVAILABLE');
 
 -- Insert Roles
 INSERT INTO ERP_ROLE_PERMISSION (
@@ -81,12 +81,12 @@ INSERT INTO ERP_SUPPLIERS (
        SUPPLIER_PAYMENT_TERM,
        SUPPLIER_TYPE
        )VALUES
-       ('自行採購', '吳泓儒', '+886939789576', 'luke82831@gmail.com', '新北市蘆洲區三民路581-2號8樓', 'A129286932', '月結', '內部供應商'),
-       ('東匯玩具', 'Jane Smith', '+1-987-654-3210', 'janesmith@freshfoods.com', '5678 Market St, Townsville', '987654321', 'Cash on Delivery', 'Food Supplier'),
-       ('夥伴玩具', 'Alan Walker', '+44-20-7946-0958', 'alanw@globaltextiles.com', '10 Downing St, London', '234567891', 'Net 60 days', 'Textile'),
-       ('maki', 'Emily Chen', '+886-2-1234-5678', 'emilyc@fastenersinc.com', '5F, No.99, Section 1, Taipei', '876543210', 'Prepaid', 'Hardware'),
-       ('龍芳有限公司', 'Michael Green', '+1-555-789-0123', 'michaelg@greenenergy.com', '888 Energy Rd, Greentown', '345678912', 'Net 45 days', 'Energy Supplier'),
-       ('雙緯企業', 'Michael Green', '+1-555-789-0123', 'michaelg@greenenergy.com', '888 Energy Rd, Greentown', '345678912', 'Net 45 days', 'Energy Supplier');
+       ('自行採購', 'WU', '+000000', 'example1@gmail.com', '2號8樓', 'A123456789', '月結', '內部供應商'),
+       ('company1', 'Jane Smith', '+11111', 'example2@gmail.com', 'Market St', '123456789', 'Cash on Delivery', 'Food Supplier'),
+       ('company2', 'Alan Walker', '+2222', 'example3@gmail.com', 'London', '234567891', 'Net 60 days', 'Textile'),
+       ('company3', 'Emily Chen', '+333', 'example4@gmail.com', 'Taipei', '876543210', 'Prepaid', 'Hardware'),
+       ('company4', 'Michael Green', '+444', 'example5@gmail.com', '888 Energy Rd', '345678912', 'Net 45 days', 'Energy Supplier'),
+       ('company5', 'Michael Green', '+555', 'example6@gmail.com', '888 Energy Rd', '345678912', 'Net 45 days', 'Energy Supplier');
 
 -- Insert Employees
 INSERT INTO ERP_EMPLOYEE (
@@ -100,13 +100,13 @@ INSERT INTO ERP_EMPLOYEE (
        SALARY,
        BANK_ACCOUNT)
 VALUES (
-       '吳泓儒',
+       'boy',
        '資訊部',
        '專案經理',
        '2025-05-04',
        '09123456789',
        'test01@example.com',
-       '台北市信義區光復南路1號',
+       'taipei',
        50000,
        123456789012
 );
@@ -118,7 +118,7 @@ INSERT INTO ERP_WAREHOUSE (
        CONTACT_PERSON
        )
        VALUES (
-       '萬隆工作室',
-       '台北市萬隆',
-       '萬隆先生'
+       '工作室',
+       '高雄市',
+       '高雄先生'
        );
