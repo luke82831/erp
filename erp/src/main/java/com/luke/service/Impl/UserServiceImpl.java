@@ -25,8 +25,8 @@ public class UserServiceImpl implements UserService {
 
         LocalDateTime getNow = LocalDateTime.now();
         User user = new User();
-        user.setUsername(userDto.getUserName());
-        user.setPassWord(userDto.getPassWord());
+        user.setUsername(userDto.getUsername());
+        user.setPassword(userDto.getPassword());
         user.setEmployeeId(userDto.getEmployeeId());
         user.setRoleId(userDto.getRoleId());
         user.setLastLoginTime(getNow);
@@ -39,11 +39,11 @@ public class UserServiceImpl implements UserService {
 
         User user = userRepository.findById(userId).orElse(null);
         LocalDateTime getNow = LocalDateTime.now();
-        if (userDto.getUserName() != null && !userDto.getUserName().isEmpty()) {
-            user.setUsername(userDto.getUserName());
+        if (userDto.getUsername() != null && !userDto.getUsername().isEmpty()) {
+            user.setUsername(userDto.getUsername());
         }
-        if (userDto.getPassWord() != null && !userDto.getPassWord().isEmpty()) {
-            user.setPassWord(userDto.getPassWord());
+        if (userDto.getPassword() != null && !userDto.getPassword().isEmpty()) {
+            user.setPassword(userDto.getPassword());
         }
         if (userDto.getEmployeeId() != null) {
             user.setEmployeeId(userDto.getEmployeeId());

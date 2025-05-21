@@ -19,7 +19,7 @@ public class User {
     private String username;
 
     @Column(name = "PASSWORD")
-    private String passWord;
+    private String password;
 
     @Column(name = "EMPLOYEE_ID")
     private int employeeId;

@@ -1,7 +1,6 @@
 package com.luke.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.persistence.Column;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -12,21 +11,21 @@ public class InventoryTransactionDto {
     @Schema(description = "產品ID")
     private long productId;
 
-    @Column(name = "庫存異動日期")
+    @Schema(name = "庫存異動日期")
     private LocalDate inventoryTransactionDate;
 
-    @Column(name = "異動類型")
+    @Schema(name = "異動類型")
     private String inventoryTransactionType;
 
-    @Column(name = "異動數量")
+    @Schema(name = "異動數量")
     private long inventoryTransactionQuantity;
 
-    @Column(name = "異動數量單位")
+    @Schema(name = "異動數量單位")
     private String inventoryTransactionUnit;
 
-    @Column(name = "訂單ID")
+    @Schema(name = "訂單ID")
     private long OrderId;
 
-    @Column(name = "倉庫ID")
+    @Schema(name = "倉庫ID")
     private int warehouseId;
 }

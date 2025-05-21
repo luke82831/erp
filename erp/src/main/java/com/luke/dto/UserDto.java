@@ -7,10 +7,10 @@ import lombok.Data;
 public class UserDto {
 
     @Schema(description = "使用者帳號")
-    private String userName;
+    private String username;
 
     @Schema(description = "使用者密碼")
-    private String passWord;
+    private String password;
 
     @Schema(description = "員工編號")
     private Integer employeeId;
